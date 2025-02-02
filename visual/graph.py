@@ -22,8 +22,8 @@ if (len(sys.argv) != 3):
     print("graph.py vertical_bench horizontal_bench")
     sys.exit()
 
-csvfile = open('../results/result_iny.csv', 'r')
-csvfile2 = open('../results/result_rt.csv', 'r')
+csvfile = open('../bench_results/result_brzozowski.csv', 'r')
+csvfile2 = open('../bench_results/result_residuals.csv', 'r')
 plots = csv.reader(csvfile, delimiter = ';')
 plots2 = csv.reader(csvfile2, delimiter = ';')
 
@@ -94,7 +94,7 @@ plt.xlabel(sys.argv[1])
 plt.ylabel(sys.argv[2]) 
 plt.xscale("log") 
 plt.yscale("log") 
-plt.title('Sim Scatter plot', fontsize = 20) 
+plt.title('Lstar Scatter plot', fontsize = 20) 
 plt.grid(True)
 plt.axis('square')
 
@@ -110,4 +110,4 @@ line = plt.axline((0,60),(60,60))
 line.set_dashes([5,2,1,2])
 line.set_color('gray')
 
-plt.show()
+plt.savefig("plot.png")

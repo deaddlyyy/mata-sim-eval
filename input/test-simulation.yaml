@@ -1,2 +1,0 @@
-testsim:
-  cmd: src/testing-simulation $1

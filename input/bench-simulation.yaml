@@ -1,5 +1,11 @@
-iny:
-  cmd: src/bench-automata-simulation $1 iny
+lstar:
+  cmd: src/bench $1 lstar
 
-simlib-rt:
-  cmd: src/bench-automata-simulation $1 forward
+brzozowski:
+  cmd: src/bench $1 brzozowski
+
+nlstar:
+  cmd: src/bench $1 nlstar
+
+residuals:
+  cmd: src/bench $1 residuals
